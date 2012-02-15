@@ -3,8 +3,10 @@ namespace bankaccount\framework\http;
 
 use bankaccount\framework\HashMap;
 
-class Response extends HashMap
+class Response
 {
+    use HashMap;
+
     protected $headers = array();
 
     public function addHeader($header)

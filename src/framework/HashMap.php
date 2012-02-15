@@ -1,7 +1,7 @@
 <?php
 namespace bankaccount\framework;
 
-class HashMap
+trait HashMap
 {
     protected $values = array();
 

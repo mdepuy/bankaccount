@@ -1,6 +1,4 @@
 <?php
-use bankaccount\framework\HashMap;
-
 /**
  * @small
  */
@@ -11,7 +9,7 @@ class HashMapTest extends PHPUnit_Framework_TestCase
      */
     public function testIsInitiallyEmpty()
     {
-        $hashMap = new HashMap;
+        $hashMap = $this->getObjectForTrait('bankaccount\\framework\\HashMap');
         $this->assertAttributeEmpty('values', $hashMap);
 
         return $hashMap;
@@ -22,7 +20,7 @@ class HashMapTest extends PHPUnit_Framework_TestCase
      * @covers  bankaccount\framework\HashMap::get
      * @depends testIsInitiallyEmpty
      */
-    public function testSettingDataWorks(HashMap $hashMap)
+    public function testSettingDataWorks($hashMap)
     {
         $hashMap->set('foo', 'bar');
 
@@ -35,7 +33,7 @@ class HashMapTest extends PHPUnit_Framework_TestCase
      */
     public function testExceptionIsRaisedWhenAccessingAnElementThatDoesNotExist()
     {
-        $hashMap = new HashMap;
+        $hashMap = $this->getObjectForTrait('bankaccount\\framework\\HashMap');
         $hashMap->get('foo');
     }
 }

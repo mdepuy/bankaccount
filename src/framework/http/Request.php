@@ -3,8 +3,10 @@ namespace bankaccount\framework\http;
 
 use bankaccount\framework\HashMap;
 
-class Request extends HashMap
+class Request
 {
+    use HashMap;
+
     protected $data;
 
     public function __construct(array $server = array(),
