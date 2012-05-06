@@ -6,7 +6,7 @@ class BankAccount{
 
     public function getBalance()
     {
-    	return $this->balance;
+        return $this->balance;
     }
 
     public function depositMoney($amount)
