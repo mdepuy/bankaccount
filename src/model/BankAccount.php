@@ -1,12 +1,10 @@
 <?php
 namespace bankaccount\model;
 
-class BankAccount
-{
+class BankAccount{
     protected $balance = 0;
 
-    public function getBalance()
-    {
+    public function getBalance(){
         return $this->balance;
     }
 
