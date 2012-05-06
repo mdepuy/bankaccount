@@ -4,8 +4,9 @@ namespace bankaccount\model;
 class BankAccount{
     protected $balance = 0;
 
-    public function getBalance(){
-        return $this->balance;
+    public function getBalance()
+    {
+    	return $this->balance;
     }
 
     public function depositMoney($amount)
